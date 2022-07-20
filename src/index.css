@@ -1,5 +1,7 @@
-body {
+* {
+  padding: 0;
   margin: 0;
+  box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +12,80 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.Home {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to right bottom, #8cd867 50% , #2fbf71 );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.home-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+}
+
+.home-input h3 {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 200;
+}
+
+.home-button-ok {
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%, -62%);
+  animation: moveUp 2s;
+}
+
+.home-button-ok button {
+    padding: 12px;
+    width: 200px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all .3s;
+    font-weight: bold;
+    background-image: linear-gradient(150deg, #2f9e44 50%, #2f9e44 50%, #087f5b 0%);
+    color: #fff;
+    background-size: 230%;
+}
+
+/* 2f9e44 */
+
+.home-button-ok button:hover {
+  background-position: 100%;
+  transform: scale(1.2);
+} 
+
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    transform: translate(-50%, -92%);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.home-input input {
+  padding: 10px;
+  padding-left: 16px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  font-size: 20px;
 }
