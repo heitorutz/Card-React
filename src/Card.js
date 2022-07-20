@@ -6,14 +6,14 @@ const Card = () => {
   const [ dogName, setDogName ] = useState([]);
   const [ dogs, setDogs ] = useState([]);
   const [ dogImages, setDogImages ] = useState([]);
+  const [shuffle, setShuffle] = useState(0);
 
+  const getNameDogs = async () => {
+    const data = await fetch('https://dog.ceo/api/breeds/list/all');
+    const json = await data.json();
+    setDogName(json.message);
+  };
   useEffect(() => {
-    const getNameDogs = async () => {
-        const data = await fetch('https://dog.ceo/api/breeds/list/all');
-        const json = await data.json();
-        setDogName(json.message);
-    };
-
     getNameDogs();
   }, []);
 
@@ -21,7 +21,11 @@ const Card = () => {
     renderDogs(dogName, setDogImages, setDogs);
   }, [dogName]);
 
-    
+  const shuffleDogs = () => {
+    const randomNumber = Math.floor((Math.random() * dogs.length));
+      setShuffle(randomNumber);
+  };
+
   return (
     <div className="Card">
       <div className="card-show-name">
@@ -30,15 +34,16 @@ const Card = () => {
 
       <div className="card-container">
         {
-          dogs.map((el, index) => <CarDog key={index} image={dogImages} index={index}/>)
+          dogs.map((el, index) => <CarDog key={index} image={dogImages} index={index} shuffle={shuffle} dogs={dogs}/>)
         }
       </div>
 
       <div className='buttons'>
           <button type="button" onClick={() => renderOneDog(dogName, setDogImages, setDogs)}>ADICIONAR MAIS CARTAS</button>
-          <button type="button">EMBARALHAR CARTAS</button>
+          <button type="button" id="shuffle" onClick={shuffleDogs}>EMBARALHAR CARTAS</button>
       </div>
     </div>
+    
   );
 }
 
