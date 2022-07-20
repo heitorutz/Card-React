@@ -29,7 +29,7 @@ const Card = () => {
 
       <div className="card-container">
         {
-          dogs.map((el, index) =>  <CarDog name={el} key={index}/>)
+          dogs.map((el, index) => <CarDog name={el} key={index}/>)
         }
       </div>
     </div>

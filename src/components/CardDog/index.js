@@ -5,8 +5,8 @@ const CarDog = ({ name }) => {
     const randomNumber = Math.floor((Math.random() * 10) + 1);
 
   return (
-    <div>
-        <h1>{name} { randomNumber } </h1>
+    <div className='card-dog'>
+        <h1 className='card-dog-name'>{name} { randomNumber } </h1>
     </div>
   )
 }
