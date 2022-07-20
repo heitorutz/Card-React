@@ -33,10 +33,6 @@ const CarDog = ({ image, index }) => {
                 (dogNameSplit !== 'bulldog' && dogNameSplit !== 'chihuahua' && dogNameSplit !== 'chow' && dogNameSplit !== 'labrador' ) ? 'A very nice dog!' : ''
             }
         </div>
-
-        <div className='buttons'>
-            
-        </div>
     </div>
   )
 }

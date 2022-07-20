@@ -124,7 +124,7 @@ code {
   height: 500px;
   gap: 30px;
   position: relative;
-  box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.6);
+  box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.3);
   transition: all .3s;
 }
 
@@ -156,4 +156,33 @@ code {
   width: 100%;
   height: 50%;
   z-index: 1;
+}
+
+.buttons {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+
+  display: flex;
+  gap: 30px;
+}
+
+.buttons button {
+  padding: 12px;
+  width: 300px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all .3s;
+  background-image: linear-gradient(150deg, #fff 50%, #fff 50%, #087f5b 0%);
+  background-size: 230%;
+}
+
+.buttons button:hover {
+  transform: scale(1.1);
+  background-position: 100%;
+  color: #fff;
 }
