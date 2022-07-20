@@ -4,7 +4,7 @@ import Loading from '../../utils/loading.gif';
 
 const CarDog = ({ image, index, shuffle, dogs }) => {
     const randomNumber = Math.floor((Math.random() * 10) + 1);
-    const dogName = image[index]?.split('/')[4];
+    const dogName = image[index + shuffle >= dogs.length ? index : index + shuffle]?.split('/')[4];
     const dogNameSplit = dogName?.split('-')[0];
 
 
