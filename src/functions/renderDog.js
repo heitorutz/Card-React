@@ -1,6 +1,6 @@
 export const renderDogs = (dogName, setDogImages, setDogs) => {
     const randomDogs = Math.floor((Math.random() * 80) + 1);
-    
+ 
     const onlyFiveDogs = Object.entries(dogName).slice(randomDogs, randomDogs + 5);
     
     onlyFiveDogs.map(el => {
@@ -14,6 +14,7 @@ export const renderDogs = (dogName, setDogImages, setDogs) => {
     getImageDog();
     return setDogs(currentList => [...currentList, el[0]]);
 })};
+
 
 export const renderOneDog = (dogName, setDogImages, setDogs) => {
     const randomDogs = Math.floor((Math.random() * 80) + 1);
