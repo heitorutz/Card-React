@@ -36,7 +36,7 @@ code {
 
 .card-show-name {
   position: absolute;
-  top: 10%;
+  top: 5%;
   right: 10%;
   color: #fff;
   font-size: 26px;
@@ -109,9 +109,10 @@ code {
 /* CARD DOG */
 
 .card-container {
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
+  grid-template-columns: repeat(5, 1fr);
   gap: 30px;
 }
 
@@ -121,11 +122,12 @@ code {
   align-items: center;
   background-color: #fff;
   width: 310px;
-  height: 500px;
+  height: 350px;
   gap: 30px;
   position: relative;
   box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.3);
   transition: all .3s;
+  border-radius: 2px;
 }
 
 .card-dog:hover {
@@ -160,9 +162,9 @@ code {
 
 .buttons {
   position: absolute;
-  top: 90%;
+  top: 95%;
   left: 50%;
-  transform: translate(-50%, -90%);
+  transform: translate(-50%, -95%);
 
   display: flex;
   gap: 30px;

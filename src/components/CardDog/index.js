@@ -18,6 +18,7 @@ const CarDog = ({ image, index, shuffle, dogs }) => {
     const splitName = () => {
         return dogName?.includes('-') ? dogNameSplit : dogName;
     };
+    
   return (
     <div className='card-dog'>
         <h1 className='card-dog-name'>{ splitName()} { randomNumber } </h1>

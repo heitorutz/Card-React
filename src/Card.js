@@ -26,6 +26,14 @@ const Card = () => {
       setShuffle(randomNumber);
   };
 
+  useEffect(() => {
+    const dogsButton = document.querySelector('#add');
+    
+    if (dogs.length === 8) {
+      dogsButton.style.pointerEvents = 'none';
+    }
+  }, [dogs])
+
   return (
     <div className="Card">
       <div className="card-show-name">
@@ -39,7 +47,7 @@ const Card = () => {
       </div>
 
       <div className='buttons'>
-          <button type="button" onClick={() => renderOneDog(dogName, setDogImages, setDogs)}>ADICIONAR MAIS CARTAS</button>
+          <button type="button" id="add" onClick={() => renderOneDog(dogName, setDogImages, setDogs)}>ADICIONAR MAIS CARTAS</button>
           <button type="button" id="shuffle" onClick={shuffleDogs}>EMBARALHAR CARTAS</button>
       </div>
     </div>
