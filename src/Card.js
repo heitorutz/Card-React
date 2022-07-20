@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { renderDogs } from "./functions/getImageDog";
+import { renderDogs, renderOneDog } from "./functions/renderDog";
 import CarDog from "./components/CardDog";
 
 const Card = () => {
@@ -35,7 +35,7 @@ const Card = () => {
       </div>
 
       <div className='buttons'>
-          <button type="button">ADICIONAR MAIS CARTAS</button>
+          <button type="button" onClick={() => renderOneDog(dogName, setDogImages, setDogs)}>ADICIONAR MAIS CARTAS</button>
           <button type="button">EMBARALHAR CARTAS</button>
       </div>
     </div>
