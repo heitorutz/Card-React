@@ -15,7 +15,9 @@ const Card = () => {
   }, []);
 
   useEffect(() => {
-    const onlyFiveDogs = Object.entries(dogName).slice(0, 5);
+    const randomDogs = Math.floor((Math.random() * 96) + 1);
+    const onlyFiveDogs = Object.entries(dogName).slice(randomDogs, randomDogs + 5);
+    console.log(onlyFiveDogs)
     onlyFiveDogs.map(el => setDogs(currentList => [...currentList, el[0]]));
   }, [dogName]);
     
@@ -27,7 +29,7 @@ const Card = () => {
 
       <div className="card-container">
         {
-          dogs.map(el => <h1>{el}</h1>)
+          dogs.map(el => <h1>{el} { Math.floor((Math.random() * 10) + 1) } </h1>)
         }
       </div>
     </div>
