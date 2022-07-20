@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import CarDog from "./components/CardDog";
 
 const Card = () => {
   const [ dogName, setDogName ] = useState([]);
@@ -17,7 +18,6 @@ const Card = () => {
   useEffect(() => {
     const randomDogs = Math.floor((Math.random() * 96) + 1);
     const onlyFiveDogs = Object.entries(dogName).slice(randomDogs, randomDogs + 5);
-    console.log(onlyFiveDogs)
     onlyFiveDogs.map(el => setDogs(currentList => [...currentList, el[0]]));
   }, [dogName]);
     
@@ -29,7 +29,7 @@ const Card = () => {
 
       <div className="card-container">
         {
-          dogs.map(el => <h1>{el} { Math.floor((Math.random() * 10) + 1) } </h1>)
+          dogs.map((el, index) =>  <CarDog name={el} key={index}/>)
         }
       </div>
     </div>

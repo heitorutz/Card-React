@@ -24,6 +24,24 @@ code {
   flex-direction: column;
 }
 
+.Card {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to right bottom, #8cd867 50% , #2fbf71 );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-show-name {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  color: #fff;
+  font-size: 26px;
+}
+
 .home-input {
   display: flex;
   flex-direction: column;

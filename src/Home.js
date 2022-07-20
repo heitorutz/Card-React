@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import Card from "./Card";
+
 
 const Home = () => {
   const [ showButton, setShowButton ] = useState(false);
@@ -30,7 +30,7 @@ const Home = () => {
           showButton && 
           <div className="home-button-ok">
             <Link to="/card">
-                <button onClick={saveName}>PROSSEGUIR</button>
+                <button onClick={saveName}>VER CARTAS</button>
             </Link>
           </div>
         }
